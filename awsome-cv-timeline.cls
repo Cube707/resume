@@ -40,7 +40,7 @@
 % Needed to make header & footer effeciently
 \RequirePackage{fancyhdr}
 % Needed to manage colors
-\RequirePackage{xcolor, luacolor}
+\RequirePackage{xcolor}
 % Needed to use \ifxetex-\else-\fi statement
 \RequirePackage{ifxetex}
 % Needed to use \if-\then-\else statement
@@ -320,8 +320,12 @@
 % Fonts configuration
 % ----------------------------------------------------------
 
+\gdef\@fontdir{\CurrentFilePath{fonts/}}
+
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
+  Path=\@fontdir,
+  Extension=.ttf,
   UprightFont=*-Regular,
   ItalicFont=*-Italic,
   BoldFont=*-Bold,
@@ -329,6 +333,8 @@
 ]{Roboto}
 
 \newfontfamily\headerfontlight[
+  Path=\@fontdir,
+  Extension=.ttf,
   UprightFont=*-Thin,
   ItalicFont=*-ThinItalic,
   BoldFont=*-Medium,
@@ -338,8 +344,9 @@
 % Provides additional symbols, browse at
 % https://www.nerdfonts.com/cheat-sheet
 \newfontfamily{\symbolsfont}[
+  Path=\@fontdir,
+  Extension=.ttf,
   UprightFont=*-Regular,
-  Extension=.ttf
 ]{SymbolsNerdFont}
 
 % Aliases to contextualise fonts in differents parts of the resume
