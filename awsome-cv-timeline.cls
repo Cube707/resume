@@ -883,7 +883,7 @@
 % - - - - - - - - - - - - - - - - - - -
 % Starts a new entry for skills (group of related keyword badges).
 % Usage: \skillcategory{<title>}
-\newcommand*{\skillcategory}[1]{\skilltypestyle{#1}}
+\newcommand*{\skillcategory}[1]{\skilltypestyle{#1}\par}
 
 % Skills table
 % - - - - - - - - - - - - - - - - - - -
@@ -960,6 +960,7 @@
     \sectionstyle{#1}
     \phantomsection
     \startsection
+    \par
 }
 
 % Define a subsection for CV
@@ -970,6 +971,7 @@
     \vspace{-3mm}
     \subsectionstyle{#1}
     \phantomsection
+    \par
 }
 
 
@@ -1008,7 +1010,7 @@
     \setlength{\parskip}{0pt}
     % Handle counter and positions for entry start
     \startentry
-    \begin{tabular*}{\textwidth}{l r}
+    \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r}
         \ifempty{#2#3}{%
             % Shorter usage (2)
             \entrypositionstyle{#1} & \entrydatestyle{#4} \\
@@ -1017,9 +1019,12 @@
             \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
             \entrypositionstyle{#1} & \entrydatestyle{#4} \\
         }%
-        % In all usages, the description is handled the same way
-        \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+        \ifx&#5&\else%
+            % In all usages, the description is handled the same way
+            \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+        \fi
     \end{tabular*}%
+    \vspace*{.5\sectioninterskip}
 }
 
 % CV Subentry
@@ -1081,7 +1086,7 @@
 % Environment spanning the whole section's content
 \newenvironment{cventries}[1][]{%
     % Make sure that you can set a title/separator for the current entry-list
-    \raggedright\entrytitlestyle{#1}
+    \ifempty{#1}{}{\raggedright\entrytitlestyle{\scshape\large\color{awesome}#1}}
     \vspace{\sectioninterskip}
     \begin{center}
 }{%

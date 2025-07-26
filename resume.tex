@@ -1,0 +1,205 @@
+% !TeX root = ./resume.tex
+\documentclass[11pt, a4paper]{awsome-cv-timeline}
+
+\usepackage[ngerman]{babel}
+
+% Configure page margins with geometry
+\geometry{vmargin=1cm, top=1.5cm, bottom=1cm, footskip=.5cm}
+
+
+% Color for highlights
+\colorlet{awesome}{awesome-emerald}
+
+
+% Set lenghts for the whole document
+\renewcommand{\headerafterskip}{1mm}
+\renewcommand{\summaryafterskip}{1mm}
+\renewcommand{\sectioninterskip}{2mm}
+
+% -----  Dual column layout -----
+% Set lenghts for the first page (double column layout)
+\setlength{\leftcolumnwidth}{5cm}
+\setlength{\leftcolumnrightmargin}{0.5cm}
+\setlength{\timelinemargin}{0.4cm}
+
+% Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave
+% any of these blank if they are not needed
+\makecvfooter{\thepage}{Jan Wille~~~·~~~Lebenslauf}{\today}
+
+\renewlist{cvitems}{itemize}{2}
+\setlist[cvitems]{
+	nosep,noitemsep,
+	topsep=0pt,
+	parsep=0pt,
+	leftmargin=2ex,
+	label=\textbullet,
+	before={\vspace{-\baselineskip}}
+}
+
+\makeatletter
+\def\@replicate#1#2{\count0=#1 \loop \ifnum\count0>0 \advance\count0 by -1 #2\repeat}
+\newcommand{\rating}[1]{\tiny\@replicate#1{~~\icon{\color{awesome}\faSquare}}}
+\newcommand{\proglangicon}[1]{\parbox[c][\baselineskip][c]{10px}{\icon{\small#1}}}
+\makeatother
+
+
+% ----- Header & Contacts Information -----
+\name{Jan}{Wille}
+\position{Softwareentwickler{\enskip\cdotp\enskip}Embedded}
+\photo[circle,edge]{2022_quadrat.jpg}
+\setlength{\headerphotowidth}{4cm}
+
+\address{Petermannstr. 12, 30455 Hannover}
+\mobile{{+}49~1520~2056206}
+\email{mail@janwille.de}
+\github{Cube707}
+\linkedin{jan-wille-582875190}
+
+% Perform some setup for debugging displays
+\setupdebug
+
+\begin{document} % =================================================================================
+\makecvheader[C]
+
+% Short summary about yourself
+\begin{cvsummary}
+\end{cvsummary}
+
+% Textblock for the left column
+\begin{textblock*}{\leftcolumnwidth}(0pt, 0pt) % ----- left column ---------------------------------
+	\setlength{\tabcolsep}{2pt}
+	\fontsize{8pt}{1em}\bodyfontlight\color{text}
+
+	\cvsection{Kontakt}
+		\begin{tabularx}{\textwidth}{c>{\raggedleft\arraybackslash}X}
+			\icon{\faBirthdayCake} & \strut \contactstyle{15.09.1998}\\
+			\caddressicon & \strut \caddress\\
+			\cmobileicon & \strut \cmobile\\
+			\cemailicon & \strut \cemail\\
+			\clinkedinicon & \strut \clinkedinuser\\
+			\cgiticon & \strut \cgituser\\
+		\end{tabularx}
+
+	\vspace{\sectioninterskip}
+	\cvsection{Qualifikationen}
+
+		\skillcategory{Sprachen}
+			\begin{tabularx}{\textwidth}{@{}l>{\raggedleft\arraybackslash}X}
+				\hobbiesstyle{Deutsch}  & \strut\hobbiesstyle{Muttersprache}                 \\
+				\hobbiesstyle{Englisch} & \strut\hobbiesstyle{Verhandlungssicher (C1 TOEIC)} \\
+			\end{tabularx}
+
+	\vspace{\sectioninterskip}
+	\cvsection{Hobbies}
+
+		\vspace{.5\baselineskip}
+		\begin{cvitems}
+			\item Bouldern mit einer Studentengruppe
+			\item Geben von Windsurfing Kursen beim Just Windsurfing Paderborn e.V.
+			\item 3D-Druck
+		\end{cvitems}
+
+\end{textblock*}
+
+% Draw the timeline for experience & education (4th & 5th sections)
+\timeline{D,E,F}
+
+\begin{textblock*} % ----- right column ------------------------------------------------------------
+	{\textwidth - \leftcolumnwidth - \leftcolumnrightmargin - 2\timelinemargin}(\leftcolumnwidth + \leftcolumnrightmargin + 2\timelinemargin, 0pt)
+
+	\cvsection{Berufliche Laufbahn}
+		\begin{cventries}
+			\cventry%
+				{Siemens AG} % Arbeitgeber
+				{Jr. Softwareentwickler für Embedded} % Stellenbezeichnung
+				{Sep. 2022 -- Aug. 2025} % Dauer
+				{Hannover} % Ort
+				{}
+
+			\cventry%
+				{Siemens AG} % Arbeitgeber
+				{Dualer Student} % Stellenbezeichnung
+				{Sep. 2017 -- Aug. 2022} % Dauer
+				{Hannover} % Ort
+				{}
+
+			% \cventry%
+			% 	{Siemens AG} % Arbeitgeber
+			% 	{Auszubildender} % Stellenbezeichnung
+			% 	{Sep. 2017 -- Jan. 2021} % Dauer
+			% 	{Hannover} % Ort
+			% 	{}
+		\end{cventries}
+		\begin{cventries}[Weitere Erfahrung]
+			\cventry%
+				{Hochschule Hannover} % Arbeitgeber
+				{Studentische Hilfskraft} % Stellenbezeichnung
+				{2020} % Dauer
+				{Hannover} % Ort
+				{
+					Im Anschluss an ein studentisches Projekt wurden von mir Unterlagen und
+					Versuchsaufbauten für das Mikroprozessor-Labor erstellt
+				}
+
+			\cventry%
+				{Siemens AG} % Arbeitgeber
+				{7-wöchige Internationale Praxisphase} % Stellenbezeichnung
+				{2019} % Dauer
+				{Congelton, GB} % Ort
+				{
+					Ich wurde für einen Sommer in einen ausländischen Produktionsstandort entsandt
+					und konnte dort internationale Erfahrung sammeln
+				}
+
+			% \cventry%
+			% 	{zweiwöchiges freiwilliges Schülerpraktikum}
+			% 	{Benteler Automobiltechnik GmbH}
+			% 	{2016}
+			% 	{Paderborn}
+			% 	{}
+
+			% \cventry%
+			% 	{zweiwöchiges Schülerpraktikum}
+			% 	{Fujitsu Technology Solutions}
+			% 	{2015}
+			% 	{Paderborn}
+			% 	{}
+		\end{cventries}
+
+	\cvsection{Schulischer Werdegang}
+		\begin{cventries}
+			\cventry%
+				{Sensor- und Automatisierungstechnik}
+				{Master of Engineering}
+				{Jan. 2023 -- Aug. 2025}
+				{Hochschule Hannover}
+				{}
+
+			\cventry%
+				{Elektro- und Informationstechnik}
+				{Bachelor of Engineering}
+				{Jan. 2019 -- Sep. 2022}
+				{Hochschule Hannover}
+				{
+					Vertiefungsrichtung: Automatisierungstechnik
+				}
+
+			\cventry%
+				{Elektroniker für Automatisierungstechnik}
+				{IHK Ausbildung}
+				{Sep. 2017 -- Feb. 2021}
+				{Siemens AG}
+				{}
+
+			\cventry%
+				{}
+				{Allgemeine Hochschulreife}
+				{2014 -- 2017}
+				{Goerdeler Gymnasium Paderborn}
+				{}
+		\end{cventries}
+
+
+\end{textblock*}
+
+\end{document}
