@@ -652,6 +652,7 @@
             \setlength{\headerphotowidth}{0.24\textwidth}
         }{}
     }%
+    \setlength{\headerphotowidth}{\leftcolumnwidth}
     \setlength{\headertextwidth}{\textwidth - \headerphotowidth}
 
     % Create minipages to show the photo & text side-by-side
@@ -661,7 +662,7 @@
     \ifthenelse{\equal{\@photoalign}{left}}{
         \begin{minipage}[c]{\headerphotowidth}%
             \begin{debugframe}
-            \raggedright\drawphoto%
+            \centering\drawphoto%
             \end{debugframe}
         \end{minipage}%
     }{}%

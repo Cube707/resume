@@ -4,7 +4,7 @@
 \usepackage[ngerman]{babel}
 
 % Configure page margins with geometry
-\geometry{vmargin=1cm, top=1.5cm, bottom=1cm, footskip=.5cm}
+\geometry{vmargin=1cm, top=1cm, bottom=1cm, footskip=.5cm}
 
 
 % Color for highlights
@@ -83,6 +83,43 @@
 	\vspace{\sectioninterskip}
 	\cvsection{Qualifikationen}
 
+		\skillcategory{DevOps}
+			\begin{skillstable}
+				\skill{Git}\skill{GitHub}\skill{GitLab}\\[3pt]
+				\skill{CI/CD}\skill{Unit Tests}\skill{HIL Tests}
+			\end{skillstable}
+
+		\skillcategory{Buildsysteme}
+			\begin{skillstable}
+				\skill{GNU make}\skill{Cmake}\skill{gcc}
+			\end{skillstable}
+
+		\skillcategory{Automatisierungstechnik}
+			\begin{skillstable}
+				\skill{TIA Portal}\skill{WinCC}\skill{EPLAN}
+			\end{skillstable}
+
+		\skillcategory{Software}
+			\begin{skillstable}
+				\skill{MatLab}\skill{VScode}\skill{MS Office}
+			\end{skillstable}
+
+		\skillcategory{Betriebsysteme}
+			\begin{skillstable}
+				\skill{Linux}\skill{Windows}
+			\end{skillstable}
+
+		\skillcategory{Programmiersprachen}
+			\begin{tabularx}{\textwidth}{@{}l>{\raggedleft\arraybackslash}X}
+				\hobbiesstyle{Python}        & \rating{5} \\
+				\hobbiesstyle{C/C++}         & \rating{4} \\
+				\hobbiesstyle{SPS Progammierung} & \rating{4} \\
+				\hobbiesstyle{Typescript}    & \rating{3} \\
+				\hobbiesstyle{HTML, CSS, JS} & \rating{3} \\
+				\hobbiesstyle{Rust}          & \rating{1} \\
+				\hobbiesstyle{Java}          & \rating{1} \\
+			\end{tabularx}
+
 		\skillcategory{Sprachen}
 			\begin{tabularx}{\textwidth}{@{}l>{\raggedleft\arraybackslash}X}
 				\hobbiesstyle{Deutsch}  & \strut\hobbiesstyle{Muttersprache}                 \\
@@ -114,14 +151,43 @@
 				{Jr. Softwareentwickler für Embedded} % Stellenbezeichnung
 				{Sep. 2022 -- Aug. 2025} % Dauer
 				{Hannover} % Ort
-				{}
+				{
+					Als Werksstudent wirkte ich bei der Entwicklung eines Safty fähigen
+					Gleichspannungs-Antriebsystem der SINAMICS Familie mit
+					\vspace{\baselineskip}
+					\begin{cvitems}
+						\item Entwicklung von Firmware für einen STM32 Embedded Controller in der
+							Programmiersprache C
+						\item Modernisieren des Update-Verfahrens auf den AES-Verschlüsselungsstandard
+						\item Unterstützung bei der Anpassung des Security-Konzeptes auf
+							Anforderungen durch den Cyber Resilience Act
+						\item Migration der Codebasis des Projektes von GitLab auf GitHub Enterprise
+						\item Konzipierung und Betreuung der Continuous Integration und
+							Continuous Delivery für das Projekt
+						\item Erstellen und anbinden von Hardware-Testaufbauten
+						\item Unterstützung und Verbesserung verschiedener DevOps Prozesse
+					\end{cvitems}
+				}
 
 			\cventry%
 				{Siemens AG} % Arbeitgeber
 				{Dualer Student} % Stellenbezeichnung
 				{Sep. 2017 -- Aug. 2022} % Dauer
 				{Hannover} % Ort
-				{}
+				{
+					Während des dualen Studiums würde ich in unterschiedlichen Abteilungen der
+					Siemens AG zur Unterstützung eingesetzt
+					\vspace{\baselineskip}
+					\begin{cvitems}
+						\item Implementierung von Klarschrifterkennung mittels Tesseract OCR
+							zur Identifizierung von Container-Kennungen
+						\item Unterstützung bei der Angebotserstellung und Projektplanung für
+							verschiedene Industrieanlagen im Großraum Hannover
+						\item Projektierung und Programmierung von Siemens-Steuerungen und HMI's
+							im TIA-Portal
+						\item Aufbau und Verdrahtung von Schaltschränken
+					\end{cvitems}
+				}
 
 			% \cventry%
 			% 	{Siemens AG} % Arbeitgeber
@@ -137,8 +203,7 @@
 				{2020} % Dauer
 				{Hannover} % Ort
 				{
-					Im Anschluss an ein studentisches Projekt wurden von mir Unterlagen und
-					Versuchsaufbauten für das Mikroprozessor-Labor erstellt
+					Erstellung von Unterlagen und Versuchsaufbauten für das Mikroprozessor-Labor
 				}
 
 			\cventry%
@@ -149,6 +214,8 @@
 				{
 					Ich wurde für einen Sommer in einen ausländischen Produktionsstandort entsandt
 					und konnte dort internationale Erfahrung sammeln
+					\vspace{\baselineskip}
+					\begin{cvitems}\item[]\end{cvitems}\vspace{-\baselineskip}
 				}
 
 			% \cventry%
@@ -173,7 +240,18 @@
 				{Master of Engineering}
 				{Jan. 2023 -- Aug. 2025}
 				{Hochschule Hannover}
-				{}
+				{
+					\begin{tabularx}{\textwidth}{@{}l@{\quad}X}
+						Masterarbeit: & Entwicklung einer Kollisionswarneinrichtung für Kleinflugzeuge \\
+						Schwerpunkte: &
+							Simulation,
+							Robotik,
+							Industrie 4.0,
+							Mikrosystemtechnik,
+							Sensorik
+					\end{tabularx}
+					\vspace{-.75\baselineskip}
+				}
 
 			\cventry%
 				{Elektro- und Informationstechnik}
@@ -181,7 +259,15 @@
 				{Jan. 2019 -- Sep. 2022}
 				{Hochschule Hannover}
 				{
-					Vertiefungsrichtung: Automatisierungstechnik
+					\begin{tabularx}{\textwidth}{@{}l@{\quad}X}
+						Bachelorarbeit: & Video-basierte Erkennung von Fahrspurmarkierungen auf mobilen Robotern \\
+						Schwerpunkte: &
+							Elektrotechnik,
+							Programmierung,
+							Regelungstechnik,
+							Schaltungstechnik
+					\end{tabularx}
+					\vspace{-.75\baselineskip}
 				}
 
 			\cventry%
@@ -189,7 +275,17 @@
 				{IHK Ausbildung}
 				{Sep. 2017 -- Feb. 2021}
 				{Siemens AG}
-				{}
+				{
+					\begin{tabularx}{\textwidth}{@{}l@{\quad}X}
+						Schwerpunkte: &
+						Aufbauen, Konfigurieren und Programmieren von SIMATIC S7-Steuerungen,
+						Inbetriebsetzung von Industrieanlagen,
+						Netzwerktechnik,
+						Installationstechnik,
+						Pneumatik
+					\end{tabularx}
+					\vspace{-.75\baselineskip}
+				}
 
 			\cventry%
 				{}
@@ -198,6 +294,10 @@
 				{Goerdeler Gymnasium Paderborn}
 				{}
 		\end{cventries}
+
+	% \cvsection{Projekte}
+	% 	\begin{cventries}
+	% 	\end{cventries}
 
 
 \end{textblock*}
