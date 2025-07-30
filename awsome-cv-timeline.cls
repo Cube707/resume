@@ -7,7 +7,7 @@
 %
 % This class is very long. It is split in multiple large sections by long
 % « ==== » separators.
-\ProvidesClass{resume}[Custom Resume]
+\ProvidesClass{awsome-cv-timeline}[Custom Resume]
 \NeedsTeXFormat{LaTeX2e}
 
 
