@@ -1,4 +1,5 @@
 .aux/
 awsome-cv-timeline/
+*.synctex.gz
 
 resume.pdf
