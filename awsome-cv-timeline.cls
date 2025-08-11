@@ -1023,7 +1023,6 @@
         \ifx&#5&\else%
             % In all usages, the description is handled the same way
             \multicolumn{2}{L{\textwidth}}{%
-                \vspace{-\baselineskip + 1.25ex}
                 \begin{minipage}{\textwidth}
                     \descriptionstyle{#5}
                 \end{minipage}%
