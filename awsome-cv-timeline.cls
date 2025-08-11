@@ -1022,10 +1022,15 @@
         }%
         \ifx&#5&\else%
             % In all usages, the description is handled the same way
-            \multicolumn{2}{L{\textwidth}}{\begin{minipage}{\textwidth}\descriptionstyle{#5}\end{minipage}}
+            \multicolumn{2}{L{\textwidth}}{%
+                \vspace{-\baselineskip + 1.25ex}
+                \begin{minipage}{\textwidth}
+                    \descriptionstyle{#5}
+                \end{minipage}%
+            }
         \fi
     \end{tabular*}%
-    \vspace*{.5\sectioninterskip}
+    \vspace{.7\sectioninterskip}
 }
 
 % CV Subentry
