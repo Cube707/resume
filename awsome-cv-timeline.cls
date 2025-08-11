@@ -1014,7 +1014,7 @@
     \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r}
         \ifempty{#2#3}{%
             % Shorter usage (2)
-            \entrypositionstyle{#1} & \entrydatestyle{#4} \\
+            \entrytitlestyle{#1} & \entrylocationstyle{#4} \\
         }{%
             % Complete usage (1)
             \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
@@ -1022,7 +1022,7 @@
         }%
         \ifx&#5&\else%
             % In all usages, the description is handled the same way
-            \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+            \multicolumn{2}{L{\textwidth}}{\begin{minipage}{\textwidth}\descriptionstyle{#5}\end{minipage}}
         \fi
     \end{tabular*}%
     \vspace*{.5\sectioninterskip}
