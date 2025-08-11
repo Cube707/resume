@@ -33,7 +33,6 @@
 	parsep=0pt,
 	leftmargin=2ex,
 	label=\textbullet,
-	before={\vspace{-\baselineskip}}
 }
 
 \makeatletter
@@ -131,7 +130,7 @@
 			\end{tabularx}
 
 		\skillcategory{Zertifikate}
-			\vspace{.5\baselineskip}
+			\vspace{-1ex}
 			\begin{cvitems}
 				\item Functional Safety: Basic I according to IEC 61508:2010\\
 				       \textit{ausgestellt durch Siemens}
@@ -139,8 +138,7 @@
 
 	\vspace{\sectioninterskip}
 	\cvsection{Hobbies}
-
-		\vspace{.5\baselineskip}
+		\vspace{-1ex}
 		\begin{cvitems}
 			\item Bouldern mit einer Studentengruppe
 			\item Geben von Windsurfing Kursen beim Just Windsurfing Paderborn e.V.
@@ -165,7 +163,6 @@
 				{
 					Als Werksstudent wirkte ich bei der Entwicklung eines Safety Integrated
 					Gleichspannungs-Antriebsystem der SINAMICS Familie mit
-					\vspace{\baselineskip}
 					\begin{cvitems}
 						\item Entwicklung von Firmware für einen STM32 Embedded Controller in der
 							Programmiersprache C
@@ -188,7 +185,6 @@
 				{
 					Während des dualen Studiums würde ich in unterschiedlichen Abteilungen der
 					Siemens AG zur Unterstützung eingesetzt
-					\vspace{\baselineskip}
 					\begin{cvitems}
 						\item Implementierung von Klarschrifterkennung mittels Tesseract OCR
 							zur Identifizierung von Container-Kennungen
@@ -202,10 +198,18 @@
 
 			% \cventry%
 			% 	{Siemens AG} % Arbeitgeber
-			% 	{Auszubildender} % Stellenbezeichnung
-			% 	{Sep. 2017 -- Jan. 2021} % Dauer
+			% 	{Test} % Stellenbezeichnung
+			% 	{} % Dauer
 			% 	{Hannover} % Ort
-			% 	{}
+			% 	{
+			% 		\begin{minipage}{\textwidth}
+			% 		\begin{cvitems}
+			% 			\item erstes Arbeitspaket
+			% 			\item zweites Arbeitspaket
+			% 		\end{cvitems}
+			% 		\end{minipage}
+			% 	}
+
 		\end{cventries}
 		\begin{cventries}[Weitere Erfahrung]
 			\cventry%
