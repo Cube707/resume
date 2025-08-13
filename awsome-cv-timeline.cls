@@ -934,10 +934,10 @@
 }
 
 \newenvironment{skillstable}{
-    % TODO: unify lengths
-    \vspace{-0.3mm}
+    \vspace{-1ex}
+    \begin{tabular*}{\textwidth}{@{}ccc@{}}
 }{
-    \vspace{-1.0mm}
+    \end{tabular*}\vspace{-2ex}
 }
 
 % Entries Titles
