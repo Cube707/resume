@@ -1,5 +1,5 @@
 % !TeX root = ./resume.tex
-\documentclass[11pt, a4paper]{awsome-cv-timeline}
+\documentclass[12pt, a4paper]{awsome-cv-timeline}
 
 \usepackage[ngerman]{babel}
 
@@ -148,16 +148,16 @@
 		\skillcategory{Zertifikate}
 			\vspace{-1ex}
 			\begin{cvitems}
-				\item Functional Safety: Basic I according to IEC 61508:2010\\
-				       \textit{ausgestellt durch Siemens}
+				\item Functional Safety: Basic I according to IEC 61508:2010
+				    %    \\\textit{ausgestellt durch Siemens}
 			\end{cvitems}
 
 	\vspace{\sectioninterskip}
 	\cvsection{Hobbies}
 		\vspace{-1ex}
 		\begin{cvitems}
+			\item Windsurfen, auch als Jugend-Trainer beim Just Windsurfing Paderborn e.V.
 			\item Bouldern mit einer Studentengruppe
-			\item Geben von Windsurfing Kursen beim Just Windsurfing Paderborn e.V.
 			\item 3D-Druck
 		\end{cvitems}
 
@@ -173,24 +173,23 @@
 		\begin{cventries}
 			\cventry%
 				{SIEMENS} % Arbeitgeber
-				{Jr. Softwareentwickler für Embedded} % Stellenbezeichnung
+				{Softwareentwickler für Embedded (Junior)} % Stellenbezeichnung
 				{Sep. 2022 -- Aug. 2025} % Dauer
 				{Hannover} % Ort
 				{\vspace*{1.25ex}
-					Als Werksstudent wirkte ich bei der Entwicklung eines Safety Integrated
-					Gleichspannungs-Antriebsystem der SINAMICS Familie mit
+					Studienbegleitend wirkte ich bei der Entwicklung eines Safety Integrated
+					Gleichspannungs-Antriebssystems der SINAMICS Familie mit
 					\begin{cvitems}
 						\item Entwicklung von Firmware für einen STM32 Embedded Controller in der
 							Programmiersprache C
-						\item Migration der Codebasis des Projektes von GitLab auf GitHub Enterprise
 						\item Konzipierung und Betreuung der automatischen Softwaretests
-								(Continuous Integration und Continuous Delivery)
-						\item Erstellen und anbinden von Hardware-Testaufbauten
-						\item Mitarbeit an einem Prozess zur digitalen Signatur der Firmware und Kommunikationswege
-						\item Unterstützung bei der Anpassung des Security-Konzeptes auf
-							Anforderungen durch den Cyber Resilience Act
+							(Continuous Integration und Continuous Delivery)
+						\item Erstellen und Anbinden von Hardware-Testaufbauten
+						\item Konzipierung und Implementierung des Security-Konzeptes im Bezug
+							Anforderungen durch den Cyber Resilience Act in Teamarbeit
 						\item Modernisieren des Update-Verfahrens auf den AES-Verschlüsselungsstandard
-						\item Unterstützung und Verbesserung verschiedener DevOps Prozesse
+						\item Migration der Codebasis des Projektes von GitLab auf GitHub Enterprise
+						\item Verbesserung verschiedener DevOps Prozesse
 					\end{cvitems}
 				}
 
@@ -200,8 +199,8 @@
 				{Sep. 2017 -- Aug. 2022} % Dauer
 				{Hannover} % Ort
 				{\vspace*{1.25ex}
-					Während des dualen Studiums wurde ich in unterschiedlichen Abteilungen der
-					Siemens AG zur Unterstützung eingesetzt
+					Während des dualen Studiums konnte ich in unterschiedlichen Abteilungen der
+					Erfahrungen sammeln
 					\begin{cvitems}
 						\item Implementierung von Klarschrifterkennung mittels Tesseract OCR
 							zur Identifizierung von Container-Kennungen
@@ -232,7 +231,7 @@
 			\cventry%
 				{Hochschule Hannover} % Arbeitgeber
 				{Studentische Hilfskraft} % Stellenbezeichnung
-				{2020} % Dauer
+				{SoSe 2020} % Dauer
 				{Hannover} % Ort
 				{\vspace*{1.25ex}
 					Erstellung von Unterlagen und Versuchsaufbauten für das Mikroprozessor-Labor
@@ -240,12 +239,16 @@
 
 			\cventry%
 				{SIEMENS} % Arbeitgeber
-				{7-wöchige Internationale Praxisphase} % Stellenbezeichnung
-				{2019} % Dauer
+				{Internationale Praxisphase} % Stellenbezeichnung
+				{Jul. - Aug. 2019} % Dauer
 				{Congelton, GB} % Ort
 				{\vspace*{1.25ex}
-					Ich wurde für einen Sommer in einen ausländischen Produktionsstandort entsandt
-					und konnte dort internationale Erfahrungen sammeln
+					Mitarbeit in einem Team zu Zertifizierung von spezifischen Kundenanwendungen
+%				
+%					Nach einem Auswahlprozess wurde ich als einer der wenigien Auszubildenen
+%
+%					Ich wurde für einen Sommer in einen ausländischen Produktionsstandort entsandt
+%					und konnte dort internationale Erfahrungen sammeln
 					\vspace{\baselineskip}
 					\begin{cvitems}\item[]\end{cvitems}\vspace{-\baselineskip-2ex}
 				}
@@ -265,7 +268,7 @@
 			% 	{}
 		\end{cventries}
 
-	\cvsection{Schulischer Werdegang}
+	\cvsection{Bildungsweg}
 		\begin{cventries}
 			\cventry%
 				{Sensor- und Automatisierungstechnik}
@@ -282,7 +285,7 @@
 							Mikrosystemtechnik,
 							Sensorik
 					\end{tabularx}
-					\vspace{-.75\baselineskip}
+					\vspace{-.5\baselineskip}
 				}
 
 			\cventry%
@@ -299,7 +302,7 @@
 							Regelungstechnik,
 							Schaltungstechnik
 					\end{tabularx}
-					\vspace{-.75\baselineskip}
+					\vspace{-.5\baselineskip}
 				}
 
 			\cventry%
@@ -307,17 +310,19 @@
 				{IHK Ausbildung}
 				{Sep. 2017 -- Feb. 2021}
 				{SIEMENS}
-				{
+				{%
 					\begin{tabularx}{\textwidth}{@{}l@{\quad}X}
 						Schwerpunkte: &
-						Aufbauen, Konfigurieren und Programmieren von SIMATIC S7-Steuerungen,
+						% Aufbauen, Konfigurieren und Programmieren von 
+						SIMATIC S7-Steuerungen,
 						Inbetriebsetzung von Industrieanlagen,
-						Netzwerktechnik,
-						Installationstechnik,
-						Pneumatik
+						% Netzwerktechnik,
+						Installationstechnik
+						% Pneumatik
 					\end{tabularx}
-					\vspace{-.75\baselineskip}
-				}
+				}				
+				\vspace{-.4\baselineskip}
+				\vspace{-.5\baselineskip}
 
 			\cventry%
 				{}
